@@ -21,10 +21,10 @@ class FangSpider(scrapy.Spider):
 			item['name'] = house.xpath('p[1]/a/text()').extract()
 			item['area'] = house.xpath('p[3]/a[1]/span/text()').extract_first()
 			item['rental'] = house.xpath('div[2]/p/span/text()').extract_first()
-			# item['unit'] = house.xpath('normalize-space(p[2]/text())').extract_first().split('|')[1]
-			# item['way'] = house.xpath('normalize-space(p[2]/text())').extract_first().split('|')[0]
-			# item['orientation'] = house.xpath('normalize-space(p[2]/text())').extract_first().split('|')[-1]
-			# item['size'] = house.xpath('normalize-space(p[2]/text())').extract_first().split('|')[2]
+			item['unit'] = house.xpath('normalize-space(p[2]/text())').extract_first().split('|')[1]
+			item['way'] = house.xpath('normalize-space(p[2]/text())').extract_first().split('|')[0]
+			item['orientation'] = house.xpath('normalize-space(p[2]/text())').extract_first().split('|')[-1]
+			item['size'] = house.xpath('normalize-space(p[2]/text())').extract_first().split('|')[2]
 
 			yield item
 

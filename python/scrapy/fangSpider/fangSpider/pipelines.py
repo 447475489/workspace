@@ -20,10 +20,10 @@ class FangspiderPipeline(object):
 		print("名称", item['name'])
 		print("区域", item['area'])
 		print("租金", item['rental'])
-		# print("户型", item['unit'])
-		# print("方式", item['way'])
-		# print("朝向", item['orientation'])
-		# print("大小", item['size'])
+		print("户型", item['unit'])
+		print("方式", item['way'])
+		print("朝向", item['orientation'])
+		print("大小", item['size'])
 
 		postItem = dict(item)  # 把item转化为字典形式
 		self.coll.insert(postItem)  # 向数据库插入一条记录
