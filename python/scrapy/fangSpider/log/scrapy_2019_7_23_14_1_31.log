@@ -1,0 +1,582 @@
+2019-07-23 14:01:31 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: fangSpider)
+2019-07-23 14:01:31 [scrapy.utils.log] INFO: Versions: lxml 4.3.4.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.1, Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 21:26:53) [MSC v.1916 32 bit (Intel)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1c  28 May 2019), cryptography 2.7, Platform Windows-10-10.0.17134-SP0
+2019-07-23 14:01:31 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fangSpider', 'DOWNLOAD_DELAY': 3, 'LOG_FILE': 'log/scrapy_2019_7_23_14_1_31.log', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fangSpider.spiders', 'SPIDER_MODULES': ['fangSpider.spiders']}
+2019-07-23 14:01:31 [scrapy.extensions.telnet] INFO: Telnet Password: 7d1ad9f375bee60b
+2019-07-23 14:01:31 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-07-23 14:01:31 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'fangSpider.middlewares.FangspiderDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-07-23 14:01:31 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'fangSpider.middlewares.FangspiderSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-07-23 14:01:31 [scrapy.middleware] INFO: Enabled item pipelines:
+['fangSpider.pipelines.FangspiderPipeline']
+2019-07-23 14:01:31 [scrapy.core.engine] INFO: Spider opened
+2019-07-23 14:01:31 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-07-23 14:01:31 [fang_post] INFO: Spider opened: fang_post
+2019-07-23 14:01:31 [fang_post] INFO: Spider opened: fang_post
+2019-07-23 14:01:31 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '团结名居 温馨房屋 随时看房', 'rental': '2250'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东西湖区', 'name': '竹叶海嘉园 精装两房 大市场附近 采光好', 'rental': '1800'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '中北路 站 锦绣中北 精装修,配置齐全', 'rental': '1190'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东西湖区', 'name': '常青苑 房子干净整洁 南北通透', 'rental': '1800'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '硚口区', 'name': '宗关 站 中建御景星城 精装修,配置齐全', 'rental': '990'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '中南丁字桥 站 027社区 精装修,配置齐全', 'rental': '1060'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '青山区', 'name': '玲珑汇临街好楼层精装电梯两房办公自住两相宜', 'rental': '2000'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '29街 一室一厅 沃尔玛旁边 家具家电齐全随时可拎包入住', 'rental': '1600'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东湖高新区', 'name': '中建三局 朗诗里程 精装三房 家电齐全 拎包入住', 'rental': '2200'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '帝斯曼国际中心 正中南路 带小阳台 价格动人 实图拍摄无中介', 'rental': '1330'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '保利城 新上三室 婚房精装修 家具家电全齐 D铁8号线 拎包即住', 'rental': '2900'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江汉区', 'name': '唐家墩 站 顶琇国际城 精装修,配置齐全', 'rental': '1160'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '中南丁字桥 站 百瑞景生活区六期 精装修,配置齐全', 'rental': '1130'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东湖高新区',
+ 'name': '关山大道BRT T1 K11光谷新世界 精装居家大两居 家电齐全拎包入住',
+ 'rental': '3800'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东湖高新区', 'name': '融科天域,地段王,坐拥光谷天地', 'rental': '4300'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东西湖区', 'name': '园艺小区 楼梯三楼 1700一个月 精装修两房 居家 看房方便', 'rental': '1700'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '青山区', 'name': '印力商圈 静安公寓,实地拍摄,干净清爽,三,四中陪读,钥匙房', 'rental': '1400'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江岸区', 'name': '罗家庄地铁站附近,环境好,南北通透', 'rental': '2600'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '青山区', 'name': '锦绣龙潭 精装两房一厅一卫', 'rental': '2200'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江汉区', 'name': '电建地产盛世江城4居室-南卧', 'rental': '830'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江岸区', 'name': '香港路3.6.7地铁中华城精装大2房 家电齐全 带外阳台', 'rental': '5500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江岸区', 'name': '中一路地铁口国际百纳精装公寓,交通便利,家电齐全,房东直租,', 'rental': '960'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江汉区', 'name': '急租 沿海菱角湖壹号1室精装修采光好拎包随时就可以入住', 'rental': '3500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东湖高新区', 'name': '保利花园 2室2厅 80平', 'rental': '2900'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江岸区', 'name': '江岸区 台北路 和美社区 精装品质大2房 拎包入住', 'rental': '2700'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东西湖区', 'name': '航天彩虹镇精装三房 出租室内宽敞明亮 长租包物业随时看房', 'rental': '2600'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '洪山区', 'name': '2号线虎泉 杨家湾附近 湖大职业学院 应届生月付免押金', 'rental': '3500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '汉阳区', 'name': '别人跑很远才看的到的鹦鹉洲大桥,你站阳台看就可以了', 'rental': '3800'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江汉区', 'name': '菱角湖壹号笋租再现菱角湖壹号50.00平', 'rental': '4000'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江岸区', 'name': '石桥花园精装朝南主卧,家电齐全,看房方便,高楼层采光好', 'rental': '990'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '中北路 青鱼嘴地铁口 楚汉新居 居家两房!', 'rental': '2900'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '沌口', 'name': '碧湖新村精装大3房3楼,整租分租都可,家电家具齐全,拎包入住', 'rental': '1500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江岸区', 'name': '正规一室一厅 名流世家 精装修 轻轨站 阳逻线 新荣客运站', 'rental': '1500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '销品茂 徐东 鹏凌苑 精装3房', 'rental': '2500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '梅苑小区 精装两房只租2400 中间楼层 光线好无遮挡', 'rental': '2200'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '汉阳区', 'name': '玫瑰东村低价格一室一厅出租,', 'rental': '1200'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '拎包可入住环境干净整洁 交通便利', 'rental': '2000'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东湖高新区', 'name': '达尚城好2房,令地铁2号线.新芯,金融港', 'rental': '1900'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '丁字桥,中南路,99号公寓,拎包入住', 'rental': '2200'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江汉区', 'name': '万松园小区 3室1厅 预约看房', 'rental': '3500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东西湖区', 'name': '东建金鼎湾,两室精装房南北通透,价格实惠拎包入住,随时看房。', 'rental': '1700'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东湖高新区', 'name': '金地中心城 整租 一居室 独门独户 押一付一 包物业', 'rental': '1750'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '沌口', 'name': '楼下就是地铁 金色港湾五期 精装一室一厅 家电齐全 拎包入住', 'rental': '1650'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '保利公园精装好房低价租,小区环境好,周边配套齐全,居家的好住', 'rental': '1500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东西湖区', 'name': '竹叶海嘉园,两室精装房南北通透采光,拎包入住,随时看房。', 'rental': '1600'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '东湖春树里 双口,办公,交通便利!!', 'rental': '5500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东湖高新区', 'name': '光谷梦工厂金融港,世贸中心一居室,步行5', 'rental': '1800'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '梅苑地铁口,梅苑小区居家2房仅租2200照片真实随时看房', 'rental': '2200'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '沌口', 'name': '外校边,D铁旁,金色港湾四期精装修三房,直接拎包入住', 'rental': '3000'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东西湖区', 'name': '山水星辰 大单间 交通方便 性价比', 'rental': '850'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江岸区', 'name': '西马名仕 一室一厅 精装修 家具齐全 邻1号和6号线 有钥匙', 'rental': '2400'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东湖高新区', 'name': '光谷地铁口旁当代国际城精装2房', 'rental': '2500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江汉区', 'name': '万松园小区,4楼,一室,独门独户,采光亮。', 'rental': '1100'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '江岸区', 'name': '后湖永旺 瑞云公馆两房出租,可办公,居家。有钥匙随时看房', 'rental': '2500'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '洪山区', 'name': '虎泉地铁口 绿汀雅境 两室两厅 居家装修 家电齐全 拎包入住', 'rental': '2200'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东湖高新区', 'name': '2号线地铁口 有轨电车旁我 万科魅力之城精装三房 急租', 'rental': '3200'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '东西湖区', 'name': '东建金鼎湾,精装地铁沿线三房低价出租小区安全环境优良随时看房', 'rental': '2100'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '2号线宝通寺地铁口 百瑞景精装二房 房东急租', 'rental': '3300'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '武昌区', 'name': '保利城4居室-北卧', 'rental': '890'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:01:32 [scrapy.core.scraper] ERROR: Error processing {'area': '汉阳区', 'name': '碧水晴天旁,精装复式大五房,家电齐全,近王家湾!', 'rental': '4200'}
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\pipelines.py", line 23, in process_item
+    print("户型", item['unit'])
+  File "c:\programs\python\python3\lib\site-packages\scrapy\item.py", line 59, in __getitem__
+    return self._values[key]
+KeyError: 'unit'
+2019-07-23 14:02:31 [scrapy.extensions.logstats] INFO: Crawled 9 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2019-07-23 14:03:31 [scrapy.extensions.logstats] INFO: Crawled 18 pages (at 9 pages/min), scraped 0 items (at 0 items/min)
+2019-07-23 14:03:57 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-07-23 14:03:57 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-07-23 14:03:57 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown

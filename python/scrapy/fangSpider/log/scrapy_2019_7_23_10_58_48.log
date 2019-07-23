@@ -1,0 +1,17 @@
+2019-07-23 10:58:49 [scrapy.core.scraper] ERROR: Spider error processing <GET https://wuhan.zu.fang.com/> (referer: None)
+Traceback (most recent call last):
+  File "c:\programs\python\python3\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\programs\python\python3\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\middlewares.py", line 35, in process_spider_output
+    for i in result:
+  File "c:\programs\python\python3\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\programs\python\python3\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\programs\python\python3\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\workspace\python\scrapy\fangSpider\fangSpider\spiders\fang_post.py", line 28, in parse
+    logging.WARNING()
+TypeError: 'int' object is not callable
